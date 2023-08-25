@@ -1,0 +1,12 @@
+[Unit]
+Description=Service for API XNK
+
+[Service]
+Restart=always
+WorkingDirectory=/home/niw/xnk_api
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/niw/xnk_api/venv/bin/python main.py
+
+[Install]
+WantedBy=multi-user.target
